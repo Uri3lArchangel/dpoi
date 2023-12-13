@@ -120,8 +120,8 @@ function Home({ clientID }: { clientID: string }) {
   };
 
   return (
-    <section className="bg-black min-h-[100vh] pt-20">
-      <header className="text-center text-white py-2">
+    <section className="bg-white min-h-[100vh] pt-20">
+      <header className="text-center text-black py-2">
         <h1 className="text-2xl font-bold">
           Buy <span className="text-green-400">DPOI</span> tokens via fiat
           portal
@@ -133,7 +133,7 @@ function Home({ clientID }: { clientID: string }) {
           <input
             type="text"
             ref={amountRef}
-            className="w-[90%] text-white mx-auto block bg-transparent border border-green-300 rounded-md px-4 h-10 outline-none my-4"
+            className="w-[90%] text-black placeholder:text-black/90 mx-auto block bg-transparent border border-green-300 rounded-md px-4 h-10 outline-none my-4"
             placeholder="Enter the amount of tokens"
             onChange={change}
           />
@@ -141,14 +141,14 @@ function Home({ clientID }: { clientID: string }) {
             type="text"
             name=""
             ref={walletRef}
-            className="w-[90%] text-white mx-auto block bg-transparent border border-green-300 rounded-md px-4 h-10 outline-none my-4"
+            className="w-[90%] text-black placeholder:text-black/90 mx-auto block bg-transparent border border-green-300 rounded-md px-4 h-10 outline-none my-4"
             id=""
             placeholder="Enter receipient address"
           />
           <input
             type="text"
             value={total+ ' USD'}
-            className="w-[90%] text-white mx-auto block bg-white/40 border cursor-not-allowed border-green-300 rounded-md px-4 h-10 outline-none my-4 "
+            className="w-[90%] text-black placeholder:text-black/90 mx-auto block bg-white/40 border cursor-not-allowed border-green-300 rounded-md px-4 h-10 outline-none my-4 "
             placeholder="Total in USD"
             disabled
           />

@@ -3,9 +3,7 @@
 @tailwind utilities;
 
 
-.home_section{
-  background-color: black;
-}
+
 .topBar {
   border-bottom-left-radius: 0.7rem;
   border-bottom-right-radius: 0.7rem;
@@ -20,8 +18,8 @@
   width: 100%;
   cursor: pointer;
   padding: 0.2em 0;
-  background-color: #111111;
-  color: yellowgreen;
+  background-color: #607D8B;
+  color: white;
 
 }
 

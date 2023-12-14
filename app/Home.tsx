@@ -27,14 +27,14 @@ function Home({ clientID }: { clientID: string }) {
     ],
   };
   const change=()=>{
-    setTotal(parseInt(amountRef.current!.value) * 1)
+    setTotal(parseInt(amountRef.current!.value) * 870.00)
   }
 
   const setupCreateOrder = (
     data: CreateOrderData,
     action: CreateOrderActions
   ) => {
-    order.purchase_units[0].amount.value = amountRef.current!.value ;
+    order.purchase_units[0].amount.value = String(parseInt(amountRef.current!.value)* 870.00) ;
     return action.order.create(order);
   };
   const setupBeforeOrder = (
@@ -126,7 +126,7 @@ function Home({ clientID }: { clientID: string }) {
           Buy <span className="text-green-400">DPOI</span> tokens via fiat
           portal
         </h1>
-        <h2 className="text-md my-4 ">1 DPOI - $1.00</h2>
+        <h2 className="text-md my-4 ">One DPOI Token is $870.00 CAD</h2>
       </header>
       <main>
         <form className="w-[90%] mx-auto  sm:w-[60%] lg:w-[40%]">
@@ -152,7 +152,7 @@ function Home({ clientID }: { clientID: string }) {
             placeholder="Total in USD"
             disabled
           />
-          <PaypalCustomProvider clientID={clientID} currency={"USD"}>
+          <PaypalCustomProvider clientID={clientID} currency={"CAD"}>
             <PayPalBtns
               createOrder={setupCreateOrder}
               onClick={setupBeforeOrder}
